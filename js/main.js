@@ -6,7 +6,7 @@ import {
   onMounted,
   onUnmounted,
 } from "https://unpkg.com/@vue/lit@0.0.2";
-import { ref as litRef } from "https://unpkg.com/lit/directives/ref.js?module";
+import { ref as $ref } from "https://unpkg.com/lit-html/directives/ref.js?module";
 
 const style = `
   ::-webkit-scrollbar {
@@ -264,8 +264,8 @@ defineComponent("yapi-generator", () => {
         <span class="copy" @click=${onCopy}>复制</span>
       </div>
       <pre class="content">${state.content}</pre>
-      <textarea class="textarea" ${litRef(textareaRef)}>${state.content}</textarea>
-      <div class="tips" ${litRef(tipsRef)} @animationend=${onTipsAnimationend}>
+      <textarea class="textarea" ${$ref(textareaRef)}>${state.content}</textarea>
+      <div class="tips" ${$ref(tipsRef)} @animationend=${onTipsAnimationend}>
         复制成功
       </div>
     </div>
