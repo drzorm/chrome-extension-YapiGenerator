@@ -1,0 +1,28 @@
+{
+    "content_scripts": [
+        {
+            "js": [
+                "js/content-script.js"
+            ],
+            "matches": [
+                "http://192.168.137.35:3000/*"
+            ]
+        }
+    ],
+    "description": "YapiGenerator!",
+    "icons": {
+        "16": "images/icon.png",
+        "48": "images/icon.png",
+        "128": "images/icon.png"
+    },
+    "manifest_version": 2,
+    "name": "YapiGenerator",
+    "permissions": [
+        "storage",
+        "activeTab"
+    ],
+    "version": "0.5",
+    "web_accessible_resources": [
+        "js/main.js"
+    ]
+}
