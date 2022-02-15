@@ -88,7 +88,7 @@ const style = `
       color: rgba(0, 0, 0, 0.2);
       text-shadow: 0px 1px rgba(255, 255, 255, 0.3);
       transform: translate3d(0, -50%, 0);
-      animation: fadeIn 1.5s ease-in forwards;
+      animation: fadeIn 1s ease-in forwards;
   }
   .tips.show {
     display: block;
@@ -205,7 +205,7 @@ defineComponent("yapi-generator", () => {
             // ${state.href}
             // ${data.title}
             verb: "${data.method.toLocaleLowerCase()}",
-            alias: "${camelcase(paths.slice(-2).join("_"))}",
+            alias: "${camelcase(paths.slice(-1).join("_"))}",
             uri: "${path}",
             json: ${data.req_body_type === "json" ? "true" : "false"},
             ${inList.length ? "in: " + JSON.stringify(inList) + ",\n" : ""}
